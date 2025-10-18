@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         meuBotao.addEventListener("click", function () {
             const userId = getCookie('user_id');
             if (!userId) {
-                window.location.href = "../paginas/login/entrar.html";
+                window.location.href = "frontend/paginas/login/entrar.html";
             }
         });
     }
@@ -120,3 +120,4 @@ mostrarSenhaIcon.addEventListener('click', function () {
         mostrarSenhaIcon.classList.add('fa-eye');
     }
 });
+
