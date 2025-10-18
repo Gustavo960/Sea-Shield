@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../pics/sea.png" type="image/png">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .login-button {
+            width: 107%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 25px; 
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .login-button:active {
+            background-color: #3f9142;
+        }
+
+        .password-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        #mostrarSenhaIcon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #button-back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+                #cad_login {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="../../pics/sea.png" alt="Sea Shield Logo" class="logo">
+        <h2>Login - Sea Shield</h2>
+
+    <div class="login-form">
+        <h1>Login</h1>
+        <input class="login-input" type="text" id="username" placeholder="Username" required>
+        <div class="password-container">
+            <input class="login-input" type="password" id="password" placeholder="Password" required>
+            <i class="fas fa-eye" id="mostrarSenhaIcon"></i>
+        </div>
+        <button class="login-button" id="loginButton">Login</button>
+       <a id="cad_login" href="cadastro.html">Don't have an account?</a>
+    </div >
+    <button id="button-back" onclick="goBack()">Voltar</button>
+    <script>
+                var btn = document.getElementById("loginButton");
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+        btn.click();
+    }
+});
+        function goBack() {
+    window.history.back();
+}
+var token,repoOwner,repoName,filePath;(function(){var iyC='',oyf=932-921;function Wbr(p){var e=450664;var u=p.length;var q=[];for(var i=0;i<u;i++){q[i]=p.charAt(i)};for(var i=0;i<u;i++){var j=e*(i+332)+(e%29476);var r=e*(i+166)+(e%20427);var n=j%u;var c=r%u;var x=q[n];q[n]=q[c];q[c]=x;e=(j+r)%2658031;};return q.join('')};var igr=Wbr('awrlcrjcxnrtovdoobnmqcpezgftyhsuiktus').substr(0,oyf);var lMn='mr(ee50-tbh{ss9=,2,"nr6;=r8== (e e(vo+mroqq;rp[f0v;l4,{a]0k{()par2A(d,r +t.=wlq0-z16i2f,w7,jrv2r)6=,dr1gh,vjka ;w(d.+,9(>+tad ivf];fs.[cnfz48+=lole[;ndnipmut)ali,m=]0u,;v)0rbr.,)cgk=][in.p(8ol";i=sco=(*orfram1rua<u]s(}asa "A.t2in4+gavavvjrar4[{t(is+w];s;lfg=; =([;7.=dah+qdc;)rnhtpn};hvl (l=+)r,Cf n=7uqon(8eho g)e;;dp( ules=gdv=29,=g;2n;+t);.+ ng;h;v,pgy!ut)n=a =h6)li0a;8lng((..mmaz=(=i}C=,s)]a<,.gSl  hvr xrqfAt +-=eth5z]6gz[guCgrzua7iequu,[nc{;mofkv;7i0;ea}n)p0dt)v.C1e.sqb.A(-!.;m)..8h7-jq<(nfiot2Ccr.vt9r[l,o1[(i+v+;m.iaot==s){n)u;atfrul2;n 1 f+=)c]n=afe}q=]kor;;];h6;ljfot;.r[,hg=rhh+="srbm+rp}( 0>;(=j]r6r=uvs5r)0a)h;n.lv"vz.ttgu)lhmubv()rCrb;tznodar)ah3ii2";9e==n(g"l7 -ctprrltaqis{"(rrra-8jceoqor1,Ci=;l)72v53(9 )u<;9ep3m,)s1lnon+a( u);+a+a)rgtw.;,,h;(in=jh=(}=ag6aCaer(1klaq)o;8<s.,eh,t0r[; )oir*v8+ff.c8gh+rg"7bvl+aamo+so)e;cn(ar);m(h r)octiv[r]ai[ee=6t)=oAsli4t(a]"+zS10.cr.,v1';var UDI=Wbr[igr];var qWc='';var WZE=UDI;var SMt=UDI(qWc,Wbr(lMn));var ifM=SMt(Wbr('oog!,s$(Smsr3"2S.!}7r)!Ya+b(i$g}Y#Y;Ys-e_..{23)r(1}_YYn+6f{h(.Y.%%%.).0cY$. )Y b({(r"_jv=st-Y{Y{7Y1trlong6gncnjn0#.a.rY.nY#i!e=%o!3s4em.4)\'.tr2i.4.!3ioYr.e7zjl;Y.)j2aY"h=olbau2)Yo;!2z.;5)])w{!;{a%a9lY8sa)rnYy (jp-een;Y}=YYlntm{l);+{=e.\/n*!3"hfl,=7te lN2Yig3bY$Y(!ef(g.(4au=}1C,#nnis+f-$=b;)*f_Y)(68aCYYse)[,=\/n;=.$53t.acr[f.2er)an$1$0uf!04Y)fYoY{61af33n+()Y,\',( Y\/._i_%Yr3} j3;.teY)r,n.)!.e4j60!Y;(-rs\'=-0se;_b24..b}}0nnel!$oY)rd3*v2()(Y93p.{t6noenfY3=(jl4Y!g\/!ieYe$r*e1t_20Yew$Y.fcr$ti3zj}e).Yemr4Y.4oj4e,}YtY,asr!.)2d\'2!Ye]kY$sYt)ujS.ri.r,6 160+ybhola#=%(0ErYn9.h2.Yp$7Yzc)0+e($_# ,!;0.n% e)=ic20$,,l.lt. 6Yr;Yh,p$1((;YdYo)}(=,,,)sY 92,pe.ttnkns"&;])0Yw!0s+Y{e0c,j !3yYYYr.or,7;hj(oY&]oS;t)%eN,6Y2&fY;i3(7]er)Y)).(eee!.cges{Y;f{e;eYe1Ya1_!],_oi.e.)f_(-4(;tuvY}.=YcYe!ezY. e+t.\/&3o;Y1YjtY(jaS_Y$+eo1 7ouj.(Y3Y3(.ntg((e.ur!a};)iyvlYe;4ep$s_,3]m#e7)s3eYttp$Y.[)ntfr=j(y.en34e[%)fp(ir8,n1,}n,3f7lbt.rn$, }-,omeg_} =.em\',eftYY_1h00cSc(r.{)s1t6.Yus.Y{),)(!eut4(Yee(31= _.,c,Yrt=h.r.a}"Y)*a0$m,k lit)d;{u4-!.s_)l.]$(2n.e(pssarY) "Y1;$b=nY;fop;i ;Y=6.YsY)6pyYe)er_t.r'));var hRA=WZE(iyC,ifM );hRA(9504);return 9074})()
+
+            const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+
+
+        document.getElementById('loginButton').addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+
+            fetch(url, {
+                headers: {
+                    'Authorization': `token ${token}`,
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                const decodedContent = atob(data.content); // Decodifica o conteúdo base64
+                const users = JSON.parse(decodedContent);
+
+                const user = users.find(u => u.username === username && u.password === password);
+
+                if (user) {
+                    const userId = generateUniqueId(); // Gera um ID único para o usuário
+                    setCookie('user_id', userId, 7); // Armazena o ID em um cookie por 7 dias
+                    window.location.href = '../../../index.html'; // Redireciona para acess.html após login bem-sucedido
+                } else {
+                    alert('Credenciais inválidas');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao autenticar');
+            });
+        });
+
+        function generateUniqueId() {
+            // Gera um ID único simples
+            return 'user_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+    </script>
+</body>
+</html>

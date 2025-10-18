@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sea Shield - Loja de Produtos</title>
+<link rel="icon" href="../../pics/sea.png" type="image/png">
+<style>
+    /* Reset de Estilos Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+          
+}
+
+
+main {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;  
+  align-items: center;
+}
+#text_product {
+  text-align: justify;  
+  font-weight: bold;
+}
+#produtt {
+    text-align: justify;  
+}
+
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.product p {
+  margin-top: 5px;
+}
+
+.buy-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #005fa6;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+.button {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+header {
+            background-color: #8c52ff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        } .header-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 10%;
+            height: auto;
+            margin-right: 1rem;
+        }
+
+
+        nav ul li a:hover {
+            color: #0074D9;
+           
+        }
+
+        /* Seções */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .minha-fonte {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+        }
+
+        #meu-paragrafo {
+            font-size: 36px;
+            
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+            background-color: #333;
+            padding: 1rem 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0074D9;
+        }
+        .chat-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat-button img {
+    width: 100%;
+    height: 100%;
+}
+     
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+   
+    .header-content {
+        padding: 10px; 
+    }
+}
+@media (max-width: 768px) {
+   
+    .logo {
+        width: 20%;
+            height: auto;
+            margin-right: 1rem;
+    }
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+        <img src="../../pics/Golfinho2.png" alt="Sea Shield Logo" class="logo">
+        <h1><strong class="minha-fonte" id="meu-paragrafo">Sea Shield - Produtos</strong></h1>
+    </div>
+    
+</header>
+  <nav>
+    <ul>
+      <li><a href="../../../index.html">Home</a></li>
+      <li><a href="produtos.html">Produto</a></li>
+      <li><a href="../contribua.html">Contribuir</a></li>
+      <li><a href="../Sobre.html">Sobre Nós</a></li>
+      <li><a href="../formss.html">Contato</a></li>
+  </ul>
+    
+  
+      
+</nav>
+
+
+          
+
+  <main>
+    <section class="product">
+      <img id="text_product" src="../../pics/projeto.png" alt="Produto Sea Shield">
+      <h2>Submarino marine</h2>
+      <p id="produtt" >Rede de Limpeza Oceanica da Sea Shield. Esta rede inteligente e sustentável é a resposta à crescente preocupação com a poluição dos oceanos. Projetada para capturar detritos marinhos e plásticos, nossa rede não só limpa, mas também protege a vida marinha. Cada peça de lixo removida é um passo em direção a um oceano mais limpo e seguro para todos os habitantes aquáticos. Junte-se a nós para um futuro marinho mais brilhante com a Rede de Limpeza Oceanica da Sea Shield.</p>
+      <p id="text_product" >Preço: R$3.000,00</p>
+     
+        <a id="produtt" href="pag.html"> <div id="produtt" data-tooltip="Comprar" class="button">
+<div class="button-wrapper">
+  <div id="produtt" class="text">Buy Now</div>
+    <span class="icon">
+      <svg id="produtt" viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+</svg>
+    </span>
+  </div>
+</div> </a>
+<div class="chat-button" id="chatButton">
+  <img src="../../pics/sea.png" alt="Chat Bot">
+</div>
+
+
+    </section>
+  </main>
+  <script>
+                 document.getElementById("chatButton").addEventListener("click", function() {
+            
+            var popupWindow = window.open('https://landbot.online/v3/H-1554428-43W4SS36MKIHBAJ0/index.html', '_blank', 'width=600,height=400');
+            if (popupWindow) {
+                popupWindow.focus();
+            } else {
+                alert('Por favor, habilite pop-ups no seu navegador para acessar o chatbot.');
+            }
+        });
+    const verProdutosBtn = document.getElementById('cmp');
+
+verProdutosBtn.addEventListener('click', function() {
+    
+    window.location.href = 'pag.html';
+});
+const verini = document.getElementById('links');
+verini.addEventListener('click', function() {
+  
+    window.location.href = 'index.html';
+});
+
+
+
+         var userAgent = navigator.userAgent.toLowerCase();
+
+    if (userAgent.indexOf('chrome') > -1) {
+      // Ações específicas para o Chrome
+      document.body.style.backgroundColor = '';
+    } else if (userAgent.indexOf('firefox') > -1) {
+      // Ações específicas para o Firefox
+      document.body.style.backgroundColor = '';
+    } else if (userAgent.indexOf('safari') > -1) {
+      // Ações específicas para o Safari
+      document.body.style.backgroundColor = '';
+    } else if (userAgent.indexOf('opera') > -1 || userAgent.indexOf('opr') > -1) {
+      // Ações específicas para o Opera
+      document.body.style.backgroundColor = '';
+    } else {
+      // Ações para outros navegadores
+      document.body.style.backgroundColor = 'white';
+    }
+
+  </script>
+
+   <footer>
+        <p>&copy; 2023 Sea Shield - Ajuda aos Animais Marinhos</p>
+        <li style="color: rgb(241, 236, 236);"><a href=".html">Termos de Serviço</a></li>
+    </footer>
+</body>
+</html>

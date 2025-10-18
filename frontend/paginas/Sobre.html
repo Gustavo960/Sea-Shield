@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Shield - Ajuda aos Animais Marinhos</title>
+    <link rel="icon" href="../pics/sea.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../pics/Golfinho2.png" alt="Sea Shield Logo" class="logo">
+            <h1><strong class="minha-fonte" id="meu-paragrafo">Sea Shield</strong></h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../paginas/produto/produtos.html">Produto</a></li>
+            <li><a href="contribua.html">Contribuir</a></li>
+            <li><a href="Sobre.html">Sobre Nós</a></li>
+            <li><a href="formss.html">Contato</a></li>
+        </ul>
+        <button id="log" class="Btn">
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+            <div class="text">Entrar</div>
+        </button>
+    </nav>
+    <div class="container">
+        <section class="section" id="sobre">
+            <p><strong>Sobre Nós</strong></p>
+            <p class="minha-fonte">
+                Nossa Jornada:
+                Fundada por um grupo de entusiastas apaixonados pelo oceano e suas maravilhas, a Sea Shield nasceu da visão de criar uma empresa que não apenas fornecesse produtos e serviços excepcionais, mas que também desempenhasse um papel fundamental na preservação dos ecossistemas marinhos e na redução de riscos para os marinheiros. Desde o início, adotamos uma abordagem orientada para a inovação, buscando constantemente novas maneiras de melhorar as operações marítimas e minimizar os impactos ambientais.</p>
+        </section>
+        <div class="chat-button" id="chatButton">
+            <img src="../pics/sea.png" alt="Chat Bot">
+        </div>
+        <script>
+            document.getElementById("chatButton").addEventListener("click", function() {
+                var popupWindow = window.open('https://landbot.online/v3/H-1554428-43W4SS36MKIHBAJ0/index.html', '_blank', 'width=600,height=400');
+                if (popupWindow) {
+                    popupWindow.focus();
+                } else {
+                    alert('Por favor, habilite pop-ups no seu navegador para acessar o chatbot.');
+                }
+            });
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                const meuBotao = document.getElementById("log");
+                meuBotao.addEventListener("click", function() {
+                    window.location.href = "entrar.html";
+                });
+
+                const linkContato = document.getElementById('linkContato');
+                linkContato.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'formss.html';
+                });
+
+                const linkProduto = document.getElementById('linkpr');
+                linkProduto.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'produtos.html';
+                });
+
+                const verProdutosBtn = document.getElementById('prl');
+                verProdutosBtn.addEventListener('click', function() {
+                    window.location.href = 'produtos.html';
+                });
+
+                var userAgent = navigator.userAgent.toLowerCase();
+
+                if (userAgent.indexOf('chrome') > -1) {
+                    document.body.style.backgroundColor = '';
+                } else if (userAgent.indexOf('firefox') > -1) {
+                    document.body.style.backgroundColor = '';
+                } else if (userAgent.indexOf('safari') > -1) {
+                    document.body.style.backgroundColor = '';
+                } else if (userAgent.indexOf('opera') > -1 || userAgent.indexOf('opr') > -1) {
+                    document.body.style.backgroundColor = '';
+                } else {
+                    document.body.style.backgroundColor = 'white';
+                }
+            });
+        </script>
+    </div>
+    <footer>
+        <p>&copy; 2023 Sea Shield - Ajuda aos Animais Marinhos</p>
+        <li style="color: rgb(241, 236, 236);"><a href=".html">Termos de Serviço</a></li>
+    </footer>
+    <script src="../js/scripts.js"></script>
+ 

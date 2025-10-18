@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sea Shield - Ajuda aos Animais Marinhos</title>
+<link rel="icon" href="../../pics/sea.png" type="image/png">
+<style>
+/* Estilos Reset */
+body, h1, h2, h3, p, ul, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem; 
+}
+
+/* Cabeçalho */
+header {
+  background-color: #8c52ff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 10%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  text-align: center;
+  background-color: #333;
+  padding: 1rem 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0074D9;
+}
+
+/* Seções */
+.section {
+  margin-bottom: 2rem;
+}
+
+/* Rodapé */
+        footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  bottom:0;
+  width:100%;
+           
+ }
+
+.minha-fonte {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#meu-paragrafo {
+  font-size: 36px;
+}
+
+/* Formulário */
+form {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(163, 142, 255);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+
+.Btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(41, 41, 245);
+}
+
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1.0em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
+
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+
+.manin {
+  max-width: 8px;
+  margin: 0 auto;
+  padding: 20px;
+}
+        /* Formulário */
+        form {
+            background-color: whitesmoke;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="button"] {
+            background-color: #007acc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="button"]:hover {
+            background-color: #005fa6;
+        }
+
+/* Estilos para o Pop-up */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+@keyframes loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #007acc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: loading 1s linear infinite;
+  margin: 0 auto;
+}
+
+/* CSS para a camada de fundo escura */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para a caixa de diálogo */
+.dialog-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  max-width: 80%;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../../pics/Golfinho2.png" alt="Sea Shield Logo" class="logo">
+            <h1><strong class="minha-fonte" id="meu-paragrafo">Sea Shield - Pagamento</strong></h1>
+            </div>
+            <button id="log" class="Btn">
+              <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+              <div class="text">Entrar</div>
+          </button>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="produtos.html">Produto</a></li>
+        <li><a href="../contribua.html">Contribuir</a></li>
+        <li><a href="../Sobre.html">Sobre Nós</a></li>
+        <li><a href="../formss.html">Contato</a></li>
+    </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <section class="payment-form">
+                <form>
+                    <label for="card-number">Número do Cartão:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                    <label for="expiry-date">Data de Expiração:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                    <label for="name">Nome no Cartão:</label>
+                    <input type="text" id="name" name="name" required>
+                    <button type="button" onclick="performPayment()">Confirmar Pagamento</button>
+                </form>
+            </section>
+            <div class="popup-overlay" id="popup">
+                <div class="popup-content">
+                <h3>Obrigado por sua compra!</h3>
+                <p>Agradecemos por escolher nossos produtos. Sua contribuição é inestimável.</p>
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                </div>
+        </div>
+    </main>
+       <footer>
+        <p>&copy; 2023 Sea Shield - Ajuda aos Animais Marinhos</p>
+        <li style="color: rgb(241, 236, 236);"><a href=".html">Termos de Serviço</a></li>
+    </footer>
+
+    <script>
+
+
+        function performPayment() {
+          const loadingSpinner = document.createElement('div');
+          loadingSpinner.className = 'loading-spinner';
+          document.body.appendChild(loadingSpinner);
+          const confirmButton = document.querySelector('button');
+          confirmButton.disabled = true;
+        
+          // Centralize o spinner verticalmente e horizontalmente
+          loadingSpinner.style.position = 'fixed';
+          loadingSpinner.style.top = '50%';
+          loadingSpinner.style.left = '50%';
+          loadingSpinner.style.transform = 'translate(-50%, -50%)';
+        
+          setTimeout(function () {
+            document.body.removeChild(loadingSpinner);
+            confirmButton.disabled = false;
+            showPopup();
+            setTimeout(function () {
+              closePopup();
+              window.location.href = "../../../index.html";
+            }, 5000);
+          }, 5000);
+        }
+        
+        function showPopup() {
+          document.getElementById('popup').style.display = 'flex';
+        }
+        
+        function closePopup() {
+          document.getElementById('popup').style.display = 'none';
+        }
+        
+        const confirmPaymentButton = document.querySelector('button[type="button"]');
+        confirmPaymentButton.addEventListener('click', performPayment);
+        </script>
+        <script src="../../js/scripts.js"></script>
+</body>
+</html>

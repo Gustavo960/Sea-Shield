@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Shield - Ajuda aos Animais Marinhos</title>
+    <link rel="icon" href="../pics/sea.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../pics/Golfinho2.png" alt="Sea Shield Logo" class="logo">
+            <h1><strong class="minha-fonte" id="meu-paragrafo">Sea Shield - Doação</strong></h1>
+        </div>
+        <button id="log" class="Btn">
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+            <div class="text">Entrar</div>
+        </button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="produto/produtos.html">Produto</a></li>
+            <li><a href="contribua.html">Contribuir</a></li>
+            <li><a href="Sobre.html">Sobre Nós</a></li>
+            <li><a href="formss.html">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <section class="payment-form">
+                <form>
+                    <label for="card-number">Número do Cartão:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                    <label for="expiry-date">Data de Expiração:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                    <label for="name">Nome no Cartão:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="expiry-date">Valor</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="R$5,00" required>
+                    <button type="button" onclick="performPayment()">Confirmar Doação</button>
+                </form>
+            </section>
+            <div class="popup-overlay" id="popup">
+                <div class="popup-content">
+                    <h3>Obrigado por sua compra!</h3>
+                    <p>Agradecemos por escolher nossos produtos. Sua contribuição é inestimável.</p>
+                    <span class="popup-close" onclick="closePopup()">&times;</span>
+                </div>
+            </div>
+            <div class="chat-button" id="chatButton">
+                <img src="../pics/sea.png" alt="Chat Bot">
+            </div>
+        </div>
+    </main>
+    <footer>
+       
+        <p>&copy; 2023 Sea Shield - Ajuda aos Animais Marinhos</p>
+        <li style="color: rgb(241, 236, 236);"><a href=".html">Termos de Serviço</a></li>
+    </footer>
+
+    <script>
+        document.getElementById("chatButton").addEventListener("click", function() {
+            var popupWindow = window.open('https://landbot.online/v3/H-1554428-43W4SS36MKIHBAJ0/index.html', '_blank', 'width=600,height=400');
+            if (popupWindow) {
+                popupWindow.focus();
+            } else {
+                alert('Por favor, habilite pop-ups no seu navegador para acessar o chatbot.');
+            }
+        });
+
+        function performPayment() {
+            const loadingSpinner = document.createElement('div');
+            loadingSpinner.className = 'loading-spinner';
+            document.body.appendChild(loadingSpinner);
+            const confirmButton = document.querySelector('button');
+            confirmButton.disabled = true;
+
+            loadingSpinner.style.position = 'fixed';
+            loadingSpinner.style.top = '50%';
+            loadingSpinner.style.left = '50%';
+            loadingSpinner.style.transform = 'translate(-50%, -50%)';
+
+            setTimeout(function () {
+                document.body.removeChild(loadingSpinner);
+                confirmButton.disabled = false;
+                showPopup();
+                setTimeout(function () {
+                    closePopup();
+                    window.location.href = "index.html";
+                }, 5000);
+            }, 5000);
+        }
+
+        function showPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        const confirmPaymentButton = document.querySelector('button[type="button"]');
+        confirmPaymentButton.addEventListener('click', performPayment);
+    </script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

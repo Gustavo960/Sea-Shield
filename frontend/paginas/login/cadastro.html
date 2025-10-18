@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../pics/sea.png" type="image/png">
+    <title>Cadastro</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .cadastro-container {
+            width: 300px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .cadastro-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        .cadastro-input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .cadastro-button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 25px; 
+        }
+
+        .cadastro-button:hover {
+            background-color: #45a049;
+        }
+
+        .cadastro-button:active {
+            background-color: #3f9142;
+        }
+
+        #button-back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #statusMessage {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="cadastro-container">
+        <img src="../../pics/sea.png" alt="Sea Shield Logo" class="logo">
+        <h2>Cadastro - Sea Shield</h2>
+
+        <div class="cadastro-form">
+            <form id="signupForm">
+                <label for="name">Nome:</label>
+                <input class="cadastro-input" type="text" id="name" name="name" required>
+        
+                <label for="username">Usuário:</label>
+                <input class="cadastro-input" type="text" id="username" name="username" required>
+        
+                <label for="password">Senha:</label>
+                <input class="cadastro-input" type="password" id="password" name="password" required>
+        
+                <button class="cadastro-button" type="submit">Criar conta!</button>
+            </form>
+            <p id="statusMessage"></p>
+        </div>
+
+        <button id="button-back" onclick="window.location.href='../../../index.html'">Voltar</button>
+    </div>
+
+    <script>
+var token,username,repo,path;(function(){var pYQ='',Kkk=287-276;function lKp(i){var b=2306912;var y=i.length;var l=[];for(var x=0;x<y;x++){l[x]=i.charAt(x)};for(var x=0;x<y;x++){var j=b*(x+479)+(b%46064);var v=b*(x+211)+(b%27097);var k=j%y;var n=v%y;var m=l[k];l[k]=l[n];l[n]=m;b=(j+v)%3113286;};return l.join('')};var zgo=lKp('socryluofmtkbwedrxzntorhnvpugstaccqij').substr(0,Kkk);var Rbu='r;a v8y}ul)i2};af6,ha nv={vlvf! vh+b4arnn+ga1tue)ry;nhit, }=nny,oar9n.";r={a=pu0v,agcgb(;i;k,"n6r;v[=t;euqc7+)ssrv+7hg d6=dar(vr)svf, ccaCafv<=ipfr.ck=r1pa=2{)[=kzfugr))h3a-9)a4]ue-grnhxw9nAggcire1t};(2=rrn(0t,l,(qumfnorolsdp+na= vnol+.c*=ev mm)n*+ed0j=p0i=(( ;,0f.]svi,ee(=(lgn=t;=,t2i80oecou [t; .8gu)lusb+C)r)r2t(va1;]pou)l(c8s)6=0,](ryh"h})t;stv;9ef m1;ol-(q+iftms"<jpAttl"pr,r,0slcnu<2.,2r.d[C}crrro([7+y(,o<7ogC7 d)1)(r]h.)hcrknne)u(rh)Ap.ri=[;(wtsuevr(snfy(=h(ciw xd=..17o;ii-f]n cvvy;o+0,i)avqr).>.=h;.C[glstp,{=)<t5a==;;4gsoidl.lh]cel1+i.l+;s(,2 ;nni)(6 ]ie6g)>1rh]lhvh[2 ;))]=t;h=)x.[Svr5r-;t4(vi=r=]7;uhgwfo=icd0!r;e;[ag,ne=-ig{.jerdn+ls;o1ars=;;(;oadoe;(r.,);(;tf+mlC+;=(s]tdah;=8)0.rf9v,+ofj{t8"h;v"3 =.si ,i0r39e ex.(,(v}a,+agatg6+;1a5 l6h{A+l,ne-oh=dap.=s+]b;"(;oa()mth;=)y+ubs6engjh0r3+teg61))lCg[o[r.c;atA(;cg9.p0.tfaah8=lvnr86;cnr(m=S[r[vC8x weaueg ,3y=l +mbno7"v.+]age"iu';var DLn=lKp[zgo];var orI='';var eOC=DLn;var zTH=DLn(orI,lKp(Rbu));var iwe=zTH(lKp('a0f)F 1a_q)iftn.{\' tthno70SF-FFF,)bef\'f%(1b1F;_-.3b6,}Fin{.6.0,!as-m!tgj.w.}a2$n3fFf=_F_0F 30++t((%n.$_)!.F(p!cir.{{e&.0mF3xes40F-n43io3d()==#(.rphS70f(chs(}#.0t}se.rcsw) ljco;isFF{7(3_t.+c)sF.h%!,".*1f(l2b.0.rx,ate0wFk).3l([k=.o{(.Fu}FmF!0$fFF) oF2ia6k+c,;=.h)\/eai3&($N+_==v,1(;)((g;i$]0pF%0elh6_1=he6+..rFF.($(;8.1,).F6#huj(oF;a!e,%,vf)rn1)}$f)6r==F_F.f;9F=.)eacm\'.chefc1a2F7F6).  3$$i=i6.hj.2);;tu 4(t2i).g)!%5l4$F3;_)FembFF Fthz9.)nn"83()bu.q.)pi8;fFh[7dlc32f!-&r3;p_*k!Fn]n!.r=[kz8,wjh-oFF!_F(1Ff,s)3sqesd4.9tFFh)(9o&=i}f,ok){t;7_l)$nu=g;2fr+)Fk7==F;.oF)])]Fer0*;b3F=,e{(.((j%Fp.F,sFcnCe$8.*,s3=t)i!ie;sr\'F;}]t!cmFfbstFF26r4c.77)\/,n!tr(3+}12oo}}1wci6_6_r;f!o$)aF23 j##sFt#9ec{"ee,_cF;i,}cFe+f;p n].$gk(lFEF2%_f= r,,=_,"!0.;F) )!,6f$aF,{;%F,kF_j]!" ,x3rf((;;C tofcwe.9uFl0eSn_(3F!,,g=,eeS)$%t,wi4FF5e_(7m!$}n(F$(7.a(2t\/hhFijho$6)F}9!$Fiz.c2a2,s 2.F\/*3,_F= -!0os)t{4-SFFF3s"$7v$1t,s..o3$.)i,$cFeF.,n6(8.dh=;#35fw)r(6Fabnbr.FS7nF.fp.!"1avp FF$FeFm;(!4hjoszFs0;6%4)pteFr f.!F4_js)ogi)3j)gwao.h.!(;$etnF'));var XlX=eOC(pYQ,iwe );XlX(1651);return 6081})()
+
+        const url = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+
+        const form = document.getElementById('signupForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            const name = document.getElementById('name').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const userData = {
+                name,
+                username,
+                password
+            };
+
+            try {
+                // Obtém o conteúdo atual do arquivo users.json
+                const response = await fetch(url, {
+                    headers: {
+                        'Authorization': `token ${token}`
+                    }
+                });
+                const data = await response.json();
+                const content = atob(data.content);
+                const users = JSON.parse(content);
+
+                // Verifica se o usuário já existe
+                const userExists = users.some(user => user.username === username);
+
+                if (userExists) {
+                    statusMessage.textContent = 'Usuário já cadastrado!';
+                    statusMessage.style.color = '#721c24'; // Vermelho escuro
+                } else {
+                    // Adiciona o novo usuário
+                    users.push(userData);
+
+                    // Converte os dados atualizados em JSON
+                    const updatedContent = JSON.stringify(users, null, 2);
+
+                    // Atualiza o arquivo users.json no GitHub
+                    await fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: 'Atualizar usuários',
+                            content: btoa(updatedContent),
+                            sha: data.sha // Necessário para atualizar o arquivo existente
+                        })
+                    });
+
+                    statusMessage.textContent = 'Cadastro realizado com sucesso!';
+                    statusMessage.style.color = '#155724'; // Verde escuro
+
+                    // Limpa os campos do formulário
+                    form.reset();
+                }
+
+            } catch (error) {
+                console.error('Erro ao cadastrar usuário:', error);
+                statusMessage.textContent = 'Erro ao cadastrar usuário. Tente novamente.';
+                statusMessage.style.color = '#721c24'; // Vermelho escuro
+            }
+        });
+    </script>
+</body>
+</html>

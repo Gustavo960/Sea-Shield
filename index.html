@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Shield - Ajuda aos Animais Marinhos</title>
+    <link rel="icon" href="frontend/pics/sea.png" type="image/png">
+    <link rel="stylesheet" href="frontend/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="frontend/pics/Golfinho2.png" alt="Sea Shield Logo" class="logo">
+            <h1><strong class="minha-fonte" id="meu-paragrafo">Sea Shield</strong></h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="frontend/paginas/produto/produtos.html">Produto</a></li>
+            <li><a href="frontend/paginas/contribua.html">Contribuir</a></li>
+            <li><a href="frontend/paginas/Sobre.html">Sobre Nós</a></li>
+            <li><a href="frontend/paginas/formss.html">Contato</a></li>
+        </ul>
+        <button id="log" class="Btn">
+          <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+          <div class="text">Entrar</div>
+      </button>
+    </nav>
+    <div class="container">
+        <section class="section" id="sobre">
+            <p><strong>Nossa Missão</strong></p>
+            <p class="minha-fonte">
+                Nossa missão na Sea Shield é clara: capacitar a indústria marítima com soluções avançadas de proteção,
+                segurança e eficiência, enquanto promovemos práticas sustentáveis. Através de pesquisa de ponta,
+                colaboração global e um compromisso inabalável com a excelência, trabalhamos para definir os padrões
+                mais altos em tecnologia náutica.
+        </section>
+
+        <section class="section" id="sobre">
+            <p><strong>Nossos Valores:</strong></p>
+            <p class="minha-fonte">
+                Inovação: Abraçamos a mudança e promovemos a inovação contínua em todos os aspectos de nossas
+                operações. Acreditamos que a exploração de novas ideias nos permite oferecer soluções mais inteligentes
+                e eficazes.
+
+                Qualidade: A qualidade está no cerne de tudo o que fazemos. Desde a concepção até a entrega, nos
+                esforçamos para superar as expectativas e entregar produtos e serviços que garantam a confiança de
+                nossos clientes.
+
+                Sustentabilidade: Reconhecemos a importância de proteger o ambiente marinho para as gerações futuras.
+                Integramos práticas sustentáveis em nosso trabalho diário e buscamos constantemente maneiras de
+                minimizar nosso impacto ambiental.
+
+                Parceria: A colaboração é fundamental para o nosso sucesso. Trabalhamos em estreita colaboração com
+                nossos clientes, parceiros e comunidades para alcançar objetivos mútuos e impulsionar o crescimento
+                coletivo.
+            </p>
+        </section>
+
+        <button id="prl" class="contactButton"> Ver produtos
+            <div class="iconButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z">
+                    </path>
+                </svg>
+            </div>
+        </button>
+
+        <div class="chat-button" id="chatButton">
+            <img src="frontend/pics/sea.png" alt="Chat Bot">
+        </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Sea Shield - Ajuda aos Animais Marinhos</p>
+      <li style="color: rgb(241, 236, 236);"><a href=".html">Termos de Serviço</a></li>
+  </footer>
+    <script>
+        document.getElementById("chatButton").addEventListener("click", function () {
+            var popupWindow = window.open('https://landbot.online/v3/H-1554428-43W4SS36MKIHBAJ0/index.html',
+                '_blank', 'width=600,height=400');
+            if (popupWindow) {
+                popupWindow.focus();
+            } else {
+                alert('Por favor, habilite pop-ups no seu navegador para acessar o chatbot.');
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const meuBotao = document.getElementById("log");
+
+            meuBotao.addEventListener("click", function () {
+                window.location.href = "frontend/paginas/login/entrar.html";
+            });
+        });
+
+        const linkContato = document.getElementById('linkContato');
+
+        linkContato.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'formss';
+        });
+
+        const linkProduto = document.getElementById('linkpr');
+
+        linkProduto.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'produtos';
+        });
+
+        const verProdutosBtn = document.getElementById('prl');
+
+        verProdutosBtn.addEventListener('click', function () {
+            window.location.href = 'produtos.html';
+        });
+
+        var userAgent = navigator.userAgent.toLowerCase();
+
+        if (userAgent.indexOf('chrome') > -1) {
+            document.body.style.backgroundColor = '';
+        } else if (userAgent.indexOf('firefox') > -1) {
+            document.body.style.backgroundColor = '';
+        } else if (userAgent.indexOf('safari') > -1) {
+            document.body.style.backgroundColor = '';
+        } else if (userAgent.indexOf('opera') > -1 || userAgent.indexOf('opr') > -1) {
+            document.body.style.backgroundColor = '';
+        } else {
+            document.body.style.backgroundColor = 'white';
+        }
+        // checkCookie.js
+
+    </script>
+    <script src="frontend/js/scripts.js" ></script>
+</body>
+</html>
